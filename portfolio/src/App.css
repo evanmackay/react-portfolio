@@ -1,0 +1,81 @@
+.App {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+
+}
+
+#navbar {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+#card-title {
+  text-align: center ;
+}
+
+#card-img {
+  width: 6in;
+  height: 4in;
+}
+
+#card {
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron {
+  margin: 1in 1in 0in 1in !important;
+}
+
+#profileImg {
+  width: 130px;
+  height: 200px;
+  margin-right: 10px;
+  float: left;
+}
+
+.background {
+  background-color: #282c34;
+}
+
+#introP {
+  font-size: 25px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

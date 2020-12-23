@@ -7,7 +7,8 @@ const Contact = () => {
             <Col xl={8} lg={8} sm={8}>
 
                     <Jumbotron>
-                        <h1>Contact</h1>                        
+                        <h1>Contact</h1>
+                                                
                         <Form method="POST" action="/send">
                             <Form.Group>
                                 <Form.Label>Name</Form.Label>

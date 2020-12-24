@@ -14,10 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 //     res.json({test: "test"})
 // })
 
-app.use(express.static(path.join("portfolio", "build")));
+app.use(express.static(path.join(__dirname,  "portfolio", "build")));
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join("portfolio", "build", "index.html"))
+    res.sendFile(path.join(__dirname, "portfolio", "build", "index.html"))
 });
 
 // app.get("/contact", (req, res) => {

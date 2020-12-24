@@ -6,8 +6,13 @@ require("dotenv").config();
 
 const PORT = process.env.PORT || 5000;
 
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.get("/test", (req, res) => {
+    res.json({test: "test"})
+})
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/portfolio/build/index.html")
@@ -53,7 +58,7 @@ app.post("/send", (req, res) => {
             console.log(error)
         } else {
             console.log("Message sent");
-            res.render("contact", {msg: "Your email has been sent."})
+            res.render("/contact", {msg: "Your email has been sent."})
         }
     });
 });

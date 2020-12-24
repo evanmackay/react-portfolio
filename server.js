@@ -10,21 +10,23 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/test", (req, res) => {
-    res.json({test: "test"})
-})
+// app.get("/test", (req, res) => {
+//     res.json({test: "test"})
+// })
 
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/portfolio/build/index.html")
-})
+app.use(express.static(path.join(__dirname,  "portfolio", "build")));
 
-app.get("/contact", (req, res) => {
-    res.sendFile(__dirname + "/portfolio/build/index.html")
-})
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname,  "portfolio", "build", "index.html"))
+});
 
-app.get("/portfolio", (req, res) => {
-    res.sendFile(__dirname + "/portfolio/build/index.html")
-})
+// app.get("/contact", (req, res) => {
+//     res.sendFile(__dirname + "/portfolio/build/index.html")
+// })
+
+// app.get("/portfolio", (req, res) => {
+//     res.sendFile(__dirname + "/portfolio/build/index.html")
+// })
 
 app.post("/send", (req, res) => {
     console.log(req.body)
@@ -63,7 +65,7 @@ app.post("/send", (req, res) => {
     });
 });
 
-app.use(express.static(__dirname + "/portfolio/build/"))
+
 
 app.listen(PORT, () => {
     console.log("app running on port " + PORT)

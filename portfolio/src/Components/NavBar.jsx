@@ -4,8 +4,8 @@ import { Navbar, Nav, NavDropdown, Col, Container } from 'react-bootstrap';
 function NavBar() {
     return(
         <Container fluid>
-            <Col sm={12} xs={12}>
-                <Navbar bg="light" expand="lg">
+            <Col fluid>
+                <Navbar bg="light" expand="lg" id="navbar">
                     <Navbar.Brand href="/">Evan Mackay</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
